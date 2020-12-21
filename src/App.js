@@ -9,7 +9,7 @@ function App() {
       <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
         <VictoryAxis
           theme={VictoryTheme.material}
-          style={{tickLabels: {fontSize: 5, overflow: 'wrap', padding: 5}}}
+          style={{tickLabels: {fontSize: 5, padding: 5}}}
           
         />
         <VictoryAxis
@@ -17,7 +17,7 @@ function App() {
           dependentAxis
           
           theme={VictoryTheme.material}
-          style={{tickLabels: {fontSize: 5, overflow: 'wrap', padding: 5}}}
+          style={{tickLabels: {fontSize: 5, padding: 5}}}
           tickFormat={y => (`${y / 1000}k views`)}
         />
 
@@ -32,19 +32,19 @@ export default App;
 const videoData =
   [
     {
-      video: "Blue Is Pretty Special: How Nature Gets the Blues",
+      video: "Blue Is Pretty Special: \nHow Nature Gets the Blues",
       views: 235678
     },
     {
-      video: "The Insect Nothing Messes With: Meet the Velvet Ant",
+      video: "The Insect Nothing Messes With: \nMeet the Velvet Ant",
       views: 502738
     },
     {
-      video: "Bacteria Could Someday Power Our Cell Phones",
+      video: "Bacteria Could Someday \nPower Our Cell Phones",
       views: 140846
     },
     {
-      video: "5 Ways Orcas Have Earned the Nickname 'Killer Whale'",
+      video: "5 Ways Orcas Have Earned \nthe Nickname 'Killer Whale'",
       views: 192457
     }
   ];
