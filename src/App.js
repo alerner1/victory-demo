@@ -1,18 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
-import { VictoryChart, VictoryAxis, VictoryBar, VictoryTheme } from 'victory';
+import { VictoryChart, VictoryAxis, VictoryBar, VictoryTheme, VictoryLabel } from 'victory';
 
 function App() {
   return (
     <div >
-      <VictoryChart        domainPadding={20}   theme={VictoryTheme.material}>
+      <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
         <VictoryAxis
           theme={VictoryTheme.material}
           style={{tickLabels: {fontSize: 5, overflow: 'wrap', padding: 5}}}
           
         />
         <VictoryAxis
+        tickLabelComponent={<VictoryLabel renderInPortal />}
           dependentAxis
           
           theme={VictoryTheme.material}
