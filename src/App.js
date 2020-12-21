@@ -1,29 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 
-import { VictoryChart, VictoryAxis, VictoryBar, VictoryTheme, VictoryLabel } from 'victory';
+import { VictoryChart, VictoryAxis, VictoryBar, VictoryTheme, } from 'victory';
 
 function App() {
   return (
-    <div >
-      <VictoryChart domainPadding={20} theme={VictoryTheme.material}>
-        <VictoryAxis
-          theme={VictoryTheme.material}
-          style={{tickLabels: {fontSize: 5, padding: 5}}}
-          
-        />
-        <VictoryAxis
-        tickLabelComponent={<VictoryLabel renderInPortal />}
-          dependentAxis
-          
-          theme={VictoryTheme.material}
-          style={{tickLabels: {fontSize: 5, padding: 5}}}
-          tickFormat={y => (`${y / 1000}k views`)}
-        />
+    <VictoryChart style={{ parent: { maxWidth: "50%" } }} domainPadding={20} theme={VictoryTheme.material}>
+      <VictoryAxis
+        style={{ tickLabels: { fontSize: 5 } }}
 
-        <VictoryBar data={videoData} x="video" y="views" />
-      </VictoryChart>
-    </div>
+      />
+      <VictoryAxis
+        dependentAxis
+        style={{ tickLabels: { fontSize: 5 } }}
+        tickFormat={y => (`${y / 1000}k views`)}
+      />
+
+      <VictoryBar data={videoData} x="video" y="views" />
+    </VictoryChart>
   );
 }
 
